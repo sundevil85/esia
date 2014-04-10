@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:rich="http://richfaces.org/rich">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>#{msg.main_title}</title> 
+        <ui:insert name="add_css"/>               
+        <h:outputStylesheet library="css" name="default.css"/> 
+        <h:outputStylesheet library="css" name="main.css"/>         
+        <h:outputStylesheet library="css" name="input.css"/>  
+
+
+        <h:outputScript library="javascript" name="jquery-2.1.0.min.js"/>
+        <ui:insert name="add_js"/>
+    </h:head>
+
+
+    <h:body>
+
+        <h:messages/>
+
+        <div id="topbar">
+            <p>#{msg.main_topbar}</p>
+        </div>
+
+        <div id="page">  
+
+
+            <div id="content">                   
+                <h:form prependId="false"> 
+                    <ui:insert name="content"/>   
+                </h:form>
+            </div>
+            
+            
+            <!--распорка для футера-->
+            <div id="hFooter"/> 
+
+        </div>
+        <div id="footer">
+            <h:outputText value="#{msg.main_copyright}" styleClass="lower_text"/>
+        </div>
+
+        <div id="growl"></div>
+
+    </h:body>
+
+</html>
+
